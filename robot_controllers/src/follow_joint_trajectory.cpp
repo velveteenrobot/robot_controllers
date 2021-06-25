@@ -141,14 +141,6 @@ bool FollowJointTrajectoryController::start()
                     "Unable to start, not initialized.");
     return false;
   }
-
-  if (!server_->isActive())
-  {
-    ROS_ERROR_NAMED("FollowJointTrajectoryController",
-                    "Unable to start, action server is not active.");
-    return false;
-  }
-
   return true;
 }
 
